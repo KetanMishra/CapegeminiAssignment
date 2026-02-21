@@ -101,6 +101,25 @@ cd ../Mockito && mvn clean install
 # ... and so on for other projects
 ```
 
+### Database Configuration
+
+**Important:** For JPA/Hibernate projects, you need to configure your database credentials.
+
+1. Navigate to the `persistence.xml` file in each JPA project under `src/main/resources/META-INF/`
+2. Update the database password:
+   ```xml
+   <property name="jakarta.persistence.jdbc.password" value="YOUR_PASSWORD_HERE"/>
+   ```
+3. Replace `YOUR_PASSWORD_HERE` with your actual MySQL root password
+4. **Never commit real passwords to version control**
+
+Projects requiring database configuration:
+- Entity_Relations
+- Employee_and_Locker
+- Employee_Nest
+- Book_Publisher_Management_System
+- Library_Book_Inventry_Management_System
+
 ## 📁 Project Structure
 
 ```
