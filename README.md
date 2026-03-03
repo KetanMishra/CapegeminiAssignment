@@ -1,120 +1,243 @@
-# Capgemini Java Advanced Assignment
+# Capgemini Java Advanced Assignment 🚀
 
-This repository contains a comprehensive collection of Java advanced practice projects covering various technologies including JPA/Hibernate, Spring Framework, Spring Boot, Spring MVC, REST APIs, JUnit, Mockito, and Java Collections & Streams.
+A comprehensive collection of Java advanced concepts and practical implementations covering JPA/Hibernate, Spring Framework, Spring Boot, Spring MVC, REST APIs, JUnit testing, Mockito, Collections & Streams, and various design patterns.
 
-## 📚 Repository Structure
+## 📋 Table of Contents
+
+- [Projects Overview](#projects-overview)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [How to Run](#how-to-run)
+- [Configuration](#configuration)
+- [Contributing](#contributing)
+- [Author](#author)
+
+## 🎯 Projects Overview
 
 ### 🔐 Authentication & Security
-- **Authentication** - User authentication implementation with security features
-
-### 🗄️ JPA & Hibernate Projects
-- **Book_Publisher_Management_System** - Book and publisher relationship management using JPA
-- **Employee_Nest** - Employee hierarchy and nested entity relationships
-- **Employee_and_Locker** - One-to-one relationship implementation between Employee and Locker
-- **Employee_and_Project** - Many-to-many relationship between Employees and Projects
-- **Entity_Relations** - Various JPA entity relationship examples
-- **Library_Book_Inventry_Management_System** - Library inventory management with book tracking
-- **hibernatedemo2_crud** - Hibernate CRUD operations demonstration
-
-### 🌸 Spring Framework Projects
-- **SpringCore** - Spring Core concepts and dependency injection
-- **SpringMVC** - Spring MVC web application framework
-- **SpringRESTapi** - RESTful web services using Spring Boot
-- **UserManagementRESTAPI** - Complete user management REST API with CRUD operations
-
-### 🖥️ Spring Boot Applications
-- **Customer_Management_System** - Customer data management with Spring Boot and Thymeleaf
-- **demo_SpringMVC** - Employee management demo using Spring MVC and Thymeleaf
-- **demoApp** - Spring Boot starter application
-- **testapp** - Spring Boot testing application
+**Authentication** - Implementation of authentication system with bank account services
+- Features: Login validation, Bank account operations
+- Testing: JUnit test cases for authentication and banking services
 
 ### 🧪 Testing Frameworks
-- **JUnit** - JUnit testing examples and best practices
-- **Mockito** - Mock testing with Mockito framework
+
+**JUnit** - Comprehensive JUnit 5 test suite demonstrating various testing techniques
+- Calculator operations testing
+- Student service testing
+- Parameterized tests with CSV data source
+
+**Mockito** - Demonstrates mocking frameworks for unit testing
+- Calculator service with mocked dependencies
+- MathService interface mocking
+- Verification and stubbing examples
 
 ### 📊 Java Core Concepts
-- **collections_and_streams** - Java Collections API and Stream operations
+
+**collections_and_streams** - Java 8+ Stream API and Collections framework implementation
+- Employee management system
+- Stream operations (filter, map, reduce, collect)
+- Advanced collection operations
+
+### 🗄️ JPA & Hibernate Projects
+
+**Entity_Relations** - One-to-One Relationship
+- Customer-Account relationship
+- Unidirectional one-to-one mapping
+
+**Employee_and_Locker** - One-to-One Bidirectional Mapping
+- Employee-Locker relationship
+- Bidirectional one-to-one mapping
+
+**Employee_Nest** - One-to-Many Relationship
+- Department-Employee relationship
+- Unidirectional one-to-many mapping
+
+**Employee_and_Project** - Many-to-Many Relationship
+- Employees and Projects relationship
+- Bidirectional many-to-many mapping
+
+**Book_Publisher_Management_System** - Many-to-One Relationship
+- Book-Publisher relationship
+- Bidirectional many-to-one mapping
+
+**Library_Book_Inventry_Management_System** - Complete Library Management
+- Complete CRUD operations
+- JPA entity management
+- Book inventory tracking
+
+**hibernatedemo2_crud** - Hibernate CRUD Operations
+- Basic Hibernate CRUD operations demonstration
+- Entity lifecycle management
+
+### 🌸 Spring Framework & Spring Boot Projects
+
+**SpringCore** - Spring Core and Dependency Injection
+- Spring Core concepts implementation
+- Dependency injection patterns
+- Bean lifecycle management
+
+**SpringMVC** - Spring MVC Web Application
+- Spring MVC framework implementation
+- Model-View-Controller pattern
+- Request mapping and handling
+
+**demo_SpringMVC** - Employee Management Demo
+- Employee management using Spring MVC and Thymeleaf
+- Web interface for CRUD operations
+- URL: `http://localhost:8080/employees`
+
+**Customer_Management_System** - Customer Data Management
+- Customer data management with Spring Boot and Thymeleaf
+- Complete CRUD operations
+- URL: `http://localhost:8080/`
+
+**demoApp** - Spring Boot Starter Application
+- Basic Spring Boot application setup
+- Auto-configuration demonstration
+
+**testapp** - Spring Boot Testing Application
+- Spring Boot testing examples
+- Integration testing patterns
+
+### 🌐 REST API Projects
+
+**SpringRESTapi** - RESTful Web Services
+- RESTful web services using Spring Boot
+- REST API design and implementation
+- JSON request/response handling
+
+**UserManagementRESTAPI** - Complete User Management REST API
+- Full-featured user management REST API
+- CRUD operations via REST endpoints
+- Endpoints:
+  - `GET /api/users` - List all users
+  - `POST /api/users` - Create user
+  - `GET /api/users/{id}` - Get user by ID
+  - `PUT /api/users/{id}` - Update user
+  - `DELETE /api/users/{id}` - Delete user
 
 ## 🛠️ Technologies Used
 
-- **Java** (JDK 8+)
-- **Spring Boot** 2.x/3.x
-- **Spring Framework** (Core, MVC, Data JPA)
-- **Hibernate** / JPA
-- **Maven** - Build and dependency management
-- **Thymeleaf** - Server-side template engine
-- **JUnit** - Unit testing
-- **Mockito** - Mocking framework
-- **MySQL** / H2 Database
-- **REST API** development
-
-## 📋 Prerequisites
-
-- Java Development Kit (JDK) 8 or higher
-- Maven 3.6+
-- MySQL Server (for projects using MySQL)
-- IDE (IntelliJ IDEA, Eclipse, or VS Code with Java extensions)
+- **Java**: 8+
+- **Spring Boot**: 2.x/3.x
+- **Spring Framework**: Core, MVC, Data JPA
+- **Build Tool**: Maven 3.6+
+- **Testing Frameworks**: 
+  - JUnit 5
+  - Mockito 3.x
+- **ORM**: 
+  - JPA 2.1
+  - Hibernate 5.x
+- **Template Engine**: Thymeleaf
+- **Database**: MySQL / H2 (embedded)
+- **REST API**: Spring REST
 
 ## 🚀 Getting Started
 
-### Clone the Repository
+### Prerequisites
+
 ```bash
+# Java Development Kit
+java -version  # Should be 8 or higher
+
+# Maven
+mvn -version   # Should be 3.6 or higher
+
+# MySQL (for JPA projects)
+mysql --version
+```
+
+### Installation
+
+```bash
+# Clone the repository
 git clone https://github.com/KetanMishra/CapegeminiAssignment.git
+
+# Navigate to project directory
 cd CapegeminiAssignment/java_advanced_assignment-master
 ```
 
+## 📁 Project Structure
+
+```
+CapegeminiAssignment/
+└── java_advanced_assignment-master/
+    ├── Authentication/                              # Authentication System
+    ├── JUnit/                                       # JUnit Testing Examples
+    ├── Mockito/                                     # Mockito Framework
+    ├── collections_and_streams/                     # Java Streams & Collections
+    ├── Entity_Relations/                            # One-to-One Relationship
+    ├── Employee_and_Locker/                         # One-to-One Bidirectional
+    ├── Employee_Nest/                               # One-to-Many Relationship
+    ├── Employee_and_Project/                        # Many-to-Many Relationship
+    ├── Book_Publisher_Management_System/            # Many-to-One Relationship
+    ├── Library_Book_Inventry_Management_System/     # Complete CRUD
+    ├── hibernatedemo2_crud/                         # Hibernate CRUD Demo
+    ├── SpringCore/                                  # Spring Core Concepts
+    ├── SpringMVC/                                   # Spring MVC Framework
+    ├── demo_SpringMVC/                              # Employee Management Demo
+    ├── Customer_Management_System/                  # Customer Management
+    ├── demoApp/                                     # Spring Boot Starter
+    ├── testapp/                                     # Spring Boot Testing
+    ├── SpringRESTapi/                               # REST API Implementation
+    ├── UserManagementRESTAPI/                       # User Management REST API
+    ├── .gitignore                                   # Git ignore rules
+    └── README.md                                    # This file
+```
+
+## ▶️ How to Run
+
 ### Running Spring Boot Projects
+
 ```bash
 cd <project-name>
-mvnw spring-boot:run
-# OR
-./mvnw spring-boot:run  # On Linux/Mac
+# Windows
+mvnw.cmd spring-boot:run
+
+# Linux/Mac
+./mvnw spring-boot:run
 ```
 
-### Running Hibernate/JPA Projects
-1. Configure database connection in `persistence.xml` or `application.properties`
-2. Update database credentials
-3. Run the main class from your IDE or use Maven:
-```bash
-mvn clean install
-mvn exec:java -Dexec.mainClass="com.example.MainClass"
-```
+### Running JUnit Tests
 
-### Building Projects
 ```bash
-mvn clean install
-```
-
-### Running Tests
-```bash
+cd JUnit
 mvn test
 ```
 
-## 📁 Project-Specific Information
+### Running Mockito Tests
 
-### Customer Management System
-- **Tech Stack**: Spring Boot, Spring Data JPA, Thymeleaf, H2/MySQL
-- **Features**: Add, view, update, and delete customer records
-- **URL**: `http://localhost:8080/`
+```bash
+cd Mockito
+mvn test
+```
 
-### Employee Management (demo_SpringMVC)
-- **Tech Stack**: Spring Boot, Spring MVC, Thymeleaf
-- **Features**: Employee CRUD operations with web interface
-- **URL**: `http://localhost:8080/employees`
+### Running JPA/Hibernate Applications
 
-### User Management REST API
-- **Tech Stack**: Spring Boot, Spring Data JPA, REST
-- **Features**: RESTful endpoints for user management
-- **Endpoints**: 
-  - GET `/api/users` - List all users
-  - POST `/api/users` - Create user
-  - GET `/api/users/{id}` - Get user by ID
-  - PUT `/api/users/{id}` - Update user
-  - DELETE `/api/users/{id}` - Delete user
+```bash
+# Update database configuration in persistence.xml first
+cd Entity_Relations
+mvn clean compile
+mvn exec:java -Dexec.mainClass="com.capgemini.onetoone.relation.App"
+```
+
+### Running Collections Demo
+
+```bash
+cd collections_and_streams
+mvn clean compile exec:java
+```
+
+### Building All Projects
+
+```bash
+mvn clean install
+```
 
 ## ⚙️ Configuration
 
-Most Spring Boot projects use `application.properties` for configuration. Update the following properties as needed:
+### Spring Boot Projects (`application.properties`)
 
 ```properties
 # Database Configuration
@@ -130,42 +253,54 @@ spring.jpa.show-sql=true
 server.port=8080
 ```
 
-For Hibernate projects, update `persistence.xml` located in `src/main/resources/META-INF/`.
+### JPA/Hibernate Projects (`persistence.xml`)
 
-## 🔒 Security Note
+**Important:** For JPA/Hibernate projects, configure database credentials in `persistence.xml` under `src/main/resources/META-INF/`:
 
-Ensure you **never commit sensitive information** such as:
-- Database passwords
-- API keys
-- Secret tokens
+```xml
+<property name="jakarta.persistence.jdbc.password" value="YOUR_PASSWORD_HERE"/>
+```
 
-Use environment variables or configuration files that are ignored by Git.
+**Security Note:** Never commit real passwords to version control. Use environment variables or configuration files that are ignored by Git.
 
-## 📝 Best Practices Implemented
+Projects requiring database configuration:
+- Entity_Relations
+- Employee_and_Locker
+- Employee_Nest
+- Employee_and_Project
+- Book_Publisher_Management_System
+- Library_Book_Inventry_Management_System
+- hibernatedemo2_crud
 
-- ✅ Proper project structure and package organization
-- ✅ Separation of concerns (Controller, Service, Repository layers)
-- ✅ Exception handling
-- ✅ Input validation
-- ✅ Unit testing with JUnit and Mockito
-- ✅ RESTful API design principles
-- ✅ Database relationship modeling
+## 📊 Key Learning Outcomes
+
+- ✅ Unit Testing with JUnit 5 and Mockito
+- ✅ JPA/Hibernate ORM concepts and all types of relationships
+- ✅ Java 8+ Streams and functional programming
+- ✅ Spring Framework (Core, MVC, Data JPA)
+- ✅ Spring Boot application development
+- ✅ RESTful API design and implementation
+- ✅ Thymeleaf template engine
+- ✅ Maven project structure and dependency management
+- ✅ Best practices for enterprise Java applications
 
 ## 🤝 Contributing
 
 This is a learning repository. Feel free to:
+- Fork and create your own versions
 - Report issues
 - Suggest improvements
 - Submit pull requests
+
+## 📝 License
+
+This project is created for educational purposes as part of Capgemini training program.
 
 ## 👤 Author
 
 **Ketan Mishra**
 - GitHub: [@KetanMishra](https://github.com/KetanMishra)
-
-## 📜 License
-
-This project is created for educational purposes as part of Capgemini training assignments.
+- Repository: [CapegeminiAssignment](https://github.com/KetanMishra/CapegeminiAssignment)
 
 ## 📞 Support
 
@@ -173,6 +308,6 @@ For questions or issues, please create an issue in the GitHub repository.
 
 ---
 
-**Note**: Each project may have its own specific setup instructions. Please refer to individual project directories for detailed information.
+**Last Updated**: March 2026
 
-Last Updated: March 2026
+*This repository demonstrates comprehensive Java enterprise application development skills including Spring ecosystem, JPA/Hibernate, testing frameworks, and modern Java features.*
